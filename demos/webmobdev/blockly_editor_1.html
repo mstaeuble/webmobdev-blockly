@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Minifizierte Variante nutzen -->
+  <script src="../../blockly_compressed.js"></script>
+  <script src="../../blocks_compressed.js"></script>
+  <!-- Deutsche Oberflaeche -->
+  <script src="../../msg/js/de.js"></script>
+</head>
+<body>
+	<h1>Blockly mit fester Gr&ouml;&szlig;e</h1>
+	<div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+	<!-- Definition der Toolbox -->
+
+	<xml id="toolbox" style="display: none">
+	</xml>
+
+	<script>
+	var workspace = Blockly.inject('blocklyDiv',
+		{media: '../../media/', toolbox: document.getElementById('toolbox')});
+	  </script>
+
+</body>
+</html>

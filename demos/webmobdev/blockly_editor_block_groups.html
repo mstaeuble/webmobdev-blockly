@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Minifizierte Variante nutzen -->
+  <script src="../../blockly_compressed.js"></script>
+  <script src="../../blocks_compressed.js"></script>
+  <!-- Deutsche Oberflaeche -->
+  <script src="../../msg/js/de.js"></script>
+</head>
+<body>
+	<h1>Blockly mit fester Gr&ouml;&szlig;e</h1>
+	<div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+	<!-- Definition der Toolbox -->
+
+	<xml id="toolbox" style="display: none">
+	  <block type="controls_for">
+	    <value name="FROM">
+	      <block type="math_number">
+	        <field name="NUM">1</field>
+	      </block>
+	    </value>
+	    <value name="TO">
+	      <block type="math_number">
+	        <field name="NUM">15</field>
+	      </block>
+	    </value>
+	    <value name="BY">
+	      <block type="math_number">
+	        <field name="NUM">1</field>
+	      </block>
+	    </value>
+	  </block>	
+	</xml>
+	<script>
+	var workspace = Blockly.inject('blocklyDiv',
+		{
+		 media: '../../media/', 
+		 toolbox: document.getElementById('toolbox'),
+		 grid:
+		         {spacing: 10,
+		          length: 8,
+		          colour: '#ccc',
+		          snap: true},
+		 zoom:
+		 {controls: true,
+		  wheel: true,
+		  startScale: 1.0,
+		  maxScale: 3,
+		  minScale: 0.3,
+		  scaleSpeed: 1.2
+		 }
+		}
+	);
+	  </script>
+
+</body>
+</html>

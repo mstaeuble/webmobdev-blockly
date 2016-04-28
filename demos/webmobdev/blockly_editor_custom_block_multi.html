@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Minifizierte Variante nutzen -->
+  <script src="../../blockly_compressed.js"></script>
+  <script src="../../blocks_compressed.js"></script>
+  <!-- Deutsche Oberflaeche -->
+  <script src="../../msg/js/de.js"></script>
+  <!-- Eigene Bloecke einbinden -->
+  <script src="blocks/webmobdev_blocks.js"></script
+</head>
+<body>
+	<h1>Blockly mit fester Gr&ouml;&szlig;e</h1>
+	<div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+	<!-- Definition der Toolbox -->
+
+	<xml id="toolbox" style="display: none">
+    	<block type="webmobdev_block_multi"></block>
+	</xml>
+	<script>
+	var workspace = Blockly.inject('blocklyDiv',
+		{
+		 media: '../../media/', 
+		 toolbox: document.getElementById('toolbox'),
+		 grid:
+		         {spacing: 10,
+		          length: 8,
+		          colour: '#ccc',
+		          snap: true},
+		 zoom:
+		 {controls: true,
+		  wheel: true,
+		  startScale: 1.0,
+		  maxScale: 3,
+		  minScale: 0.3,
+		  scaleSpeed: 1.2
+		 }
+		}
+	);
+	  </script>
+
+</body>
+</html>
